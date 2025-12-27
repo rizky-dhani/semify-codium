@@ -14,3 +14,5 @@ node_modules/**
 *.vsix
 debug-extension.sh
 package-extension.sh
+update-extension.sh
+release/**
