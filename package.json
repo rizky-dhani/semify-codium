@@ -1,0 +1,105 @@
+{
+  "name": "auto-semicolon",
+  "displayName": "Auto Semicolon",
+  "description": "Quickly add semicolons at the end of lines with customizable shortcuts",
+  "version": "1.0.0",
+  "publisher": "da1shiq",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "icon": "icon.png",
+  "categories": [
+    "Other",
+    "Formatters"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "auto-semicolon.addSemicolonCurrentLine",
+        "title": "Auto Semicolon: Add Semicolon to Current Line"
+      },
+      {
+        "command": "auto-semicolon.addSemicolonSelectedLines",
+        "title": "Auto Semicolon: Add Semicolon to Selected Lines"
+      },
+      {
+        "command": "auto-semicolon.addSemicolonAndNextLine",
+        "title": "Auto Semicolon: Add Semicolon and Move to Next Line"
+      },
+      {
+        "command": "auto-semicolon.toggleSemicolon",
+        "title": "Auto Semicolon: Toggle Semicolon on Current Line"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "auto-semicolon.addSemicolonCurrentLine",
+        "key": "ctrl+;",
+        "mac": "cmd+;",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "auto-semicolon.addSemicolonSelectedLines",
+        "key": "ctrl+shift+;",
+        "mac": "cmd+shift+;",
+        "when": "editorTextFocus && editorHasSelection"
+      },
+      {
+        "command": "auto-semicolon.addSemicolonAndNextLine",
+        "key": "ctrl+alt+;",
+        "mac": "cmd+alt+;",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "auto-semicolon.toggleSemicolon",
+        "key": "ctrl+k ctrl+;",
+        "mac": "cmd+k cmd+;",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Auto Semicolon",
+      "properties": {
+        "autoSemicolon.languageSpecific": {
+          "type": "boolean",
+          "default": true,
+          "description": "Only enable for specific languages (PHP, JavaScript, TypeScript, C, C++, Java, etc.)"
+        },
+        "autoSemicolon.enabledLanguages": {
+          "type": "array",
+          "default": [
+            "php",
+            "javascript",
+            "typescript",
+            "java",
+            "c",
+            "cpp",
+            "csharp",
+            "go",
+            "rust"
+          ],
+          "description": "Languages where semicolon insertion is enabled"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.41.0",
+    "typescript": "^5.0.4"
+  }
+}
