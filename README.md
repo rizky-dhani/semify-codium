@@ -1,6 +1,6 @@
-# Semify Extension
+# <img src="icon.png" width="40" height="40"> Semify
 
-A VS Code/Codium extension by **da1shiq** that helps you quickly add semicolons at the end of lines with customizable keyboard shortcuts. Perfect for PHP, JavaScript, TypeScript, and other semicolon-heavy languages.
+A VS Code/Codium extension that helps you quickly add semicolons at the end of lines with customizable keyboard shortcuts. Perfect for PHP, JavaScript, TypeScript, and other semicolon-heavy languages.
 
 ## Features
 
