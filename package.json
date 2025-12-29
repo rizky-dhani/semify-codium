@@ -4,6 +4,10 @@
   "description": "Quickly add semicolons at the end of lines with customizable shortcuts - Perfect for PHP, JavaScript, TypeScript and other semicolon-heavy languages",
   "version": "1.0.0",
   "publisher": "da1shiq",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/da1shiq/semify-codium.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
